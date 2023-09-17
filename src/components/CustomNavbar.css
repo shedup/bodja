@@ -1,0 +1,21 @@
+.navbarStyle {
+  background-color: antiquewhite;
+  width: 100%;
+}
+.bodjaTitle {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.litems {
+  margin: 0 50px;
+  font-weight: 500;
+  vertical-align: middle;
+}
+
+.spotify {
+  margin: 0 0;
+  color: red;
+  position: relative;
+  padding-left: 0;
+}

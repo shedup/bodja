@@ -3,8 +3,9 @@ import spotify from "../assets/spotifyLogo.svg";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import "./CustomNavbar.css";
 
-const CustomNavbar = () => {
+function CustomNavbar() {
   return (
     <>
       <Navbar className="navbarStyle" expand="lg">
@@ -36,6 +37,6 @@ const CustomNavbar = () => {
       </Navbar>
     </>
   );
-};
+}
 
 export default CustomNavbar;
