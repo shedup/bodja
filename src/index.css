@@ -69,6 +69,10 @@ button:focus-visible {
 } */
 
 html {
-  background-color: lightgray;
   font-family: sans-serif;
+}
+
+
+main{
+  background-color: white;
 }

@@ -11,8 +11,14 @@ function Home() {
 
   return (
     <>
+      {items.length == 0 && <p>No items sorry.</p>}
+
       <div className="background row">
-        <Item items={items} />
+        {items.map((item) => (
+          <div className="col-lg-4 col-md-6 col-sm-12">
+          <Item name={item.name} description={item.description} />
+          </div>
+        ))}
       </div>
     </>
   );

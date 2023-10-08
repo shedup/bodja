@@ -1,11 +1,12 @@
 .card {
-  /* width: 30%; */
+  width: 350px;
+  margin-bottom: 50px;
 }
+
 .outer-container {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 10%;
 }
 
 .inner-container {
