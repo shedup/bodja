@@ -1,5 +1,4 @@
 import React from "react";
-import spotify from "../assets/spotifyLogo.svg";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -13,12 +12,9 @@ function CustomNavbar() {
           <Navbar.Brand className="bodjaTitle" href="#">
             Bodja
           </Navbar.Brand>
-          <Nav.Link className="spotify" href="#">
-            <img src={spotify} width="70px" />
-          </Nav.Link>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav"  />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="me-auto" style={{ marginLeft: "200px"}}>
               <Nav.Link className="litems" href="#">
                 Merch
               </Nav.Link>
