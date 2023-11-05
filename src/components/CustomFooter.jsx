@@ -1,4 +1,3 @@
-import spotify from "../assets/spotifyLogo.svg";
 import {
     Box, FooterContainer, Row, Column, FooterLink, Heading
 }
@@ -51,7 +50,7 @@ function CustomFooter(){
                                         marginLeft: "10px",
                                     }}
                                 >
-            <img src={spotify} width="70px" />
+                                Spotify
                                 </span>
                             </i>
                         </FooterLink>
