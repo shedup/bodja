@@ -9,7 +9,7 @@ function CustomNavbar() {
     <>
       <Navbar className="navbarStyle" expand="lg">
         <Container>
-          <Navbar.Brand className="bodjaTitle" href="#">
+          <Navbar.Brand className="bodjaTitle" href="/">
             Bodja
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav"  />
