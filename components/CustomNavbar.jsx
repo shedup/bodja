@@ -16,8 +16,7 @@ function CustomNavbar() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto" style={{ marginLeft: "200px" }}>
-                <a className="litems" href="#">
-                  {" "}
+                <a className="litems" href="/">
                   Merch
                 </a>
                 <a className="litems" href="#">
