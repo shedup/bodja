@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="layout">
-      <title>New Bodja</title>
+      <title>Bodja</title>
       <link
         rel="stylesheet"
         href={stylePath}
