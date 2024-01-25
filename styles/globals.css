@@ -183,7 +183,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 50px;
+  gap: 100px;
   margin-top: 20px;
   width: 100%;
 }
@@ -243,4 +243,21 @@
 }
 .icon-links:hover {
   color: gray;
+}
+
+/* Responsiveness - for mobile and small screens */
+@media screen and (max-width: 1200px) {
+  .product-detail-container {
+    flex-wrap: wrap;
+  }
+  .product-detail-container .product-detail-image {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .item:hover {
+    transform: scale(1, 1);
+  }
 }

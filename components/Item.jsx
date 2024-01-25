@@ -15,8 +15,8 @@ const Item = ({ item: { image, name, slug, price } }) => {
           <img
             src={image && urlFor(image && image[0])}
             className="item-img-top"
-            width={400}
-            height={400}
+            width={350}
+            height={350}
             alt="The description of the image not available yet."
           />
           <div className="item-body">
