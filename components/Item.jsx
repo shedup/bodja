@@ -11,7 +11,7 @@ const Item = ({ item: { image, name, slug, price } }) => {
         style={{ textDecoration: "none" }}
       >
         <div className="item">
-          {/* Have to be webp for better responsiveness */}
+          {/* Have to be .webp for better responsiveness */}
           <img
             src={image && urlFor(image && image[0])}
             className="item-img-top"

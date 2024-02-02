@@ -14,12 +14,14 @@ export default {
     },
     {
       name: 'name',
+      description: 'Enter full name of the product',
       title: 'Name',
       type: 'string',
     },
     {
       name: 'slug',
       title: 'Slug',
+      description: 'A unique identifier, press generate',
       type: 'slug',
       options: {
         source: 'name',
@@ -29,10 +31,12 @@ export default {
     {
       name: 'price',
       title: 'Price',
+      description: 'Price in dollars upto 2 decimal points',
       type: 'number',
     },
     {
       name: 'details',
+      description: 'Description of the product',
       title: 'Details',
       type: 'string',
     },
