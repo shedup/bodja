@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -16,15 +17,15 @@ function CustomNavbar() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto" style={{ marginLeft: "200px" }}>
-                <a className="litems" href="/">
+                <Nav.Link className="litems" href="/">
                   Merch
-                </a>
-                <a className="litems" href="#">
+                </Nav.Link>
+                <Nav.Link className="litems" href="/team">
                   Team
-                </a>
-                <a className="litems" href="#">
+                </Nav.Link>
+                <Nav.Link className="litems" href="/about">
                   About
-                </a>
+                </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </div>
