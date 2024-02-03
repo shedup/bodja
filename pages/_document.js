@@ -3,7 +3,16 @@ import { Html, Head, Main, NextScript } from "next/document";
 export default function Document() {
   return (
     <Html lang="en">
-      <Head />
+      <Head>
+        <link rel="icon" href="/static/example_svg.ico" />
+        <meta charSet="UTF-8"></meta>
+        <meta
+          name="keywords"
+          content="Tibetan Tibet Bodja Podcast American Merch E-Commerce Tenzin Chaksam"
+        ></meta>
+        <meta name="description" content="Bodja podcast website"></meta>
+        <meta name="author" content="Tenzin Chaksam"></meta>
+      </Head>
       <body>
         <Main />
         <NextScript />

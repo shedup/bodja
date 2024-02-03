@@ -1,8 +1,11 @@
 import { TeamMember } from "@/components";
 import { client } from "@/lib/client";
-import React from "react";
+import React, { useEffect } from "react";
 
 const Team = ({ members }) => {
+  useEffect(() => {
+    document.title = "Team - Bodja";
+  });
   return (
     <>
       <div className="team-container">

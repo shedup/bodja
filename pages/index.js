@@ -1,8 +1,11 @@
 import { CustomNavbar, Item } from "@/components";
 import { client } from "@/lib/client";
-import React from "react";
+import React, { useEffect } from "react";
 
 const Home = ({ items }) => {
+  useEffect(() => {
+    document.title = "Merch - Bodja";
+  });
   return (
     <>
       <div className="heading">
