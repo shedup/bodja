@@ -5,18 +5,18 @@ import { urlFor } from "../lib/client";
 
 const TeamMember = ({ member: { image, name, role, details } }) => {
   return (
-    <div className="item">
+    <div className="team">
       {/* Have to be .webp for better responsiveness */}
       <img
         src={image && urlFor(image && image[0])}
-        className="item-img-top"
-        width={350}
+        className="team-img-top"
+        width={450}
         height={350}
         alt="The description of the image not available yet."
       />
-      <div className="item-body">
-        <h5 className="item-title">{name}</h5>
-        <p className="item-price">{role}</p>
+      <div className="team-body">
+        <h5 className="team-name">{name}</h5>
+        <p className="team-role">{details}</p>
       </div>
     </div>
   );

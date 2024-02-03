@@ -20,7 +20,7 @@ const About = () => {
           width="711"
           height="400"
           src="https://www.youtube.com/embed/ZTzZB9Z6hEQ"
-          frameborder="0"
+          frameBorder="0"
         ></iframe>
       </div>
       <div className="heading-about">

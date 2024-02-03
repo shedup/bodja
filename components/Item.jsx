@@ -17,7 +17,7 @@ const Item = ({ item: { image, name, slug, price } }) => {
             className="item-img-top"
             width={350}
             height={350}
-            alt="The description of the image not available yet."
+            alt={name}
           />
           <div className="item-body">
             <h5 className="item-title">{name}</h5>

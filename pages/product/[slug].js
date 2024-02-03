@@ -30,7 +30,7 @@ const ItemDetails = ({ item }) => {
         </div>
 
         <div className="product-detail-desc">
-          <h1 className>{name}</h1>
+          <h1>{name}</h1>
           <p className="details">{details}</p>
           <p className="price">${price}</p>
           <div className="quantity">

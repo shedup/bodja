@@ -1,6 +1,15 @@
 html {
   background-color: antiquewhite;
 }
+.layout {
+  font-family: "Courier New", Courier, monospace;
+  margin: 0 auto;
+}
+.main-container {
+  max-width: 1400px;
+  margin: auto;
+  width: 100%;
+}
 /* global styles names */
 .heading {
   text-align: center;
@@ -26,7 +35,7 @@ html {
 .videos {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 5px;
+  margin-top: 40px;
   position: relative;
   overflow: hidden;
   width: 66.66%;
@@ -44,6 +53,7 @@ html {
 .heading-about {
   text-align: start;
   margin: 40px 30%;
+  margin-bottom: 0px;
   color: rgb(110, 107, 62);
 }
 .heading-about h1,
@@ -59,6 +69,9 @@ h2 {
   font-weight: 200;
 }
 /* Nav */
+.navbar-nav {
+  margin-left: 0px !important;
+}
 .navbarStyle {
   /* #FAEBD7 */
   background-color: antiquewhite;
@@ -72,8 +85,8 @@ h2 {
 }
 
 .litems {
-  color: black;
-  font-weight: 500;
+  color: black !important;
+  font-weight: 600;
   margin: 0 50px;
   vertical-align: middle;
   box-sizing: content-box;
@@ -117,8 +130,8 @@ h2 {
 .product-detail-container {
   display: flex;
   gap: 50px;
-  margin: 190px;
   margin-top: 60px;
+  justify-content: center;
   color: black;
 }
 
@@ -126,9 +139,11 @@ h2 {
   border-style: outset;
   border-radius: 10px;
   width: 500px;
-  height: 500px;
+  height: auto;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  object-fit: cover;
+  max-width: 100%;
 }
 .product-detail-image:hover {
   transform: scale(1.1, 1.1);
@@ -155,8 +170,7 @@ h2 {
 }
 
 .product-detail-desc h1 {
-  font-weight: bold;
-  color: gray;
+  color: black;
 }
 .product-detail-desc p {
   margin-top: 10px;
@@ -178,6 +192,10 @@ h2 {
 .product-detail-desc .buttons {
   display: flex;
   gap: 30px;
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
 }
 .buttons .add-to-cart,
 .buttons .buy-now {
@@ -249,11 +267,9 @@ h2 {
   transform: scale(1.1, 1.1);
 }
 
-.item-image-top {
-  border-radius: 15px;
-  background-color: #ebebeb;
-  transform: scale(1, 1);
-  transition: transform 0.5s ease;
+.item-img-top {
+  object-fit: cover;
+  max-width: 100%;
 }
 
 .item-body {
@@ -269,8 +285,61 @@ h2 {
   color: black;
 }
 
-.item-name {
+/* Team */
+
+.teams-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 20px;
+  width: 100%;
+}
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 20px;
+  width: 100%;
+  display: block;
+}
+.team-container h1 {
+  display: block;
   font-weight: 500;
+}
+
+.team {
+  color: black;
+  border-color: black;
+  /* Analogous color theory */
+  background-color: rgb(207, 207, 207);
+  height: 100%;
+  width: 450px;
+  /* background-color: #f7fad7; */
+}
+
+.team-img-top {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.team-body {
+  text-decoration: none;
+  height: 250px;
+}
+.team-body.a {
+  text-decoration: none;
+}
+.team-name {
+  margin-left: 10%;
+  margin-top: 5%;
+  text-align: start;
+}
+.team-role {
+  margin: 5% 10%;
+  text-align: start;
+  margin-top: 6px;
 }
 
 /* Footer */
@@ -281,7 +350,7 @@ h2 {
   justify-content: center;
   gap: 50px;
   padding: 20px 0;
-  margin-top: 20px;
+  margin-top: 70px;
   width: 100%;
 }
 .icon-links {
@@ -292,7 +361,7 @@ h2 {
 }
 
 /* Responsiveness - for mobile and small screens */
-@media screen and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   .product-detail-container {
     flex-wrap: wrap;
   }
@@ -302,11 +371,40 @@ h2 {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .item:hover {
+    transform: scale(1, 1);
+  }
+  .product-detail-image:hover {
     transform: scale(1, 1);
   }
   .heading-about {
     margin: 40px 0px;
+  }
+  .product-detail-container {
+    justify-content: center;
+  }
+}
+/* 320 is the smallest screen size */
+@media only screen and (max-width: 480px) {
+  .team {
+    width: 25rem;
+    object-fit: contain;
+  }
+  .team-body {
+    height: 120%;
+    margin: 0 0;
+    text-align: start;
+  }
+  .buttons .add-to-cart,
+  .buttons .buy-now {
+    margin-top: 0;
+  }
+  .buttons {
+    margin-top: 50px;
+  }
+  .buttons,
+  .quantity {
+    justify-content: center;
   }
 }
