@@ -1,8 +1,6 @@
 html {
   background-color: antiquewhite;
 }
-.toast:last-child {
-}
 .layout {
   font-family: "Courier New", Courier, monospace;
   margin: 0 auto;
@@ -484,6 +482,15 @@ h2 {
 }
 .icon-links:hover {
   color: gray;
+}
+/* 404 */
+.misc-container {
+  font-weight: 700;
+  margin: 40px 0px;
+  color: rgb(110, 107, 62);
+  text-align: center;
+  vertical-align: center;
+  height: 65vh;
 }
 
 /* Responsiveness - for mobile and small screens */
