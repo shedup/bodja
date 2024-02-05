@@ -13,6 +13,10 @@ export default function Document() {
         ></meta>
         <meta name="description" content="Bodja podcast website"></meta>
         <meta name="author" content="Tenzin Chaksam"></meta>
+        <meta
+          name="google-site-verification"
+          content="dklqgeB3SeTkoFo4P0Ouj7IWLw6h8mfUJV4oIlW7_4I"
+        />
       </Head>
       <body>
         <Main />
