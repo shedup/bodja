@@ -1,6 +1,8 @@
 html {
   background-color: antiquewhite;
 }
+.toast:last-child {
+}
 .layout {
   font-family: "Courier New", Courier, monospace;
   margin: 0 auto;

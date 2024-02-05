@@ -22,8 +22,15 @@ const Cart = () => {
     onRemove,
     notAvail,
   } = useStateContext();
+  document.body.addEventListener("click", ({ target }) => {
+    if (target.className == "cart-wrapper") setShowCart(false);
+  });
   return (
-    <div className="cart-wrapper" ref={cartRef}>
+    <div
+      className="cart-wrapper"
+      onClick={() => console.log("CLICKEd")}
+      ref={cartRef}
+    >
       <div className="cart-container">
         <button
           type="button"

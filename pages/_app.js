@@ -14,7 +14,21 @@ export default function App({ Component, pageProps }) {
           <title>Bodja</title>
         </Head>
         <Layout>
-          <Toaster />
+          <Toaster
+            toastOptions={{
+              style: {
+                background: "gray",
+                color: "white",
+              },
+            }}
+            containerStyle={{
+              top: 60,
+              left: 20,
+              bottom: 20,
+              right: 20,
+            }}
+          />
+
           <Component {...pageProps} />
         </Layout>
         <SpeedInsights />

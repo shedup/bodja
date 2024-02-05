@@ -43,7 +43,10 @@ export const StateContext = ({ children }) => {
       product.quantity = quantity;
       setCartItems([...cartItems, { ...product }]);
     }
-    toast.success(`${qty} ${product.name} added to the cart`);
+    toast.success(`${qty} ${product.name} added to the cart`, {
+      position: "top-center",
+      className: "toast",
+    });
   };
 
   const onRemove = (product) => {
@@ -93,7 +96,7 @@ export const StateContext = ({ children }) => {
   };
 
   const notAvail = () => {
-    toast("Not available yet");
+    toast.error("Not available yet");
   };
 
   return (
