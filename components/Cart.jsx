@@ -2,6 +2,7 @@ import { useStateContext } from "@/context/StateContext";
 import { urlFor } from "@/lib/client";
 import Link from "next/link";
 import React, { useRef } from "react";
+import toast from "react-hot-toast";
 
 import {
   AiOutlineLeft,
@@ -12,8 +13,15 @@ import {
 import { TiDeleteOutline } from "react-icons/ti";
 const Cart = () => {
   const cartRef = useRef();
-  const { totalPrice, totalQuantities, cartItems, setShowCart } =
-    useStateContext();
+  const {
+    totalPrice,
+    totalQuantities,
+    cartItems,
+    setShowCart,
+    toggleCartItemQuantity,
+    onRemove,
+    notAvail,
+  } = useStateContext();
   return (
     <div className="cart-wrapper" ref={cartRef}>
       <div className="cart-container">
@@ -61,16 +69,32 @@ const Cart = () => {
                   <div className="flex bottom">
                     <div>
                       <p className="quantity-desc">
-                        <button type="button" className="minus">
+                        <button
+                          type="button"
+                          className="minus"
+                          onClick={() =>
+                            toggleCartItemQuantity(item._id, "dec")
+                          }
+                        >
                           <AiOutlineMinus />
                         </button>
-                        <span className="num">0</span>
-                        <button type="button" className="plus">
+                        <span className="num">{item.quantity}</span>
+                        <button
+                          type="button"
+                          className="plus"
+                          onClick={() =>
+                            toggleCartItemQuantity(item._id, "inc")
+                          }
+                        >
                           <AiOutlinePlus />
                         </button>
                       </p>
                     </div>
-                    <button type="button" className="remove-item">
+                    <button
+                      type="button"
+                      className="remove-item"
+                      onClick={() => onRemove(item)}
+                    >
                       <TiDeleteOutline />
                     </button>
                   </div>
@@ -85,7 +109,11 @@ const Cart = () => {
               <h3>${totalPrice}</h3>
             </div>
             <div className="btn-container">
-              <button type="button" className="btn-cart" onClick="">
+              <button
+                type="button"
+                className="btn-cart"
+                onClick={() => notAvail()}
+              >
                 Pay With Stripe
               </button>
             </div>

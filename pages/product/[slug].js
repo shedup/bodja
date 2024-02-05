@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { client, urlFor } from "@/lib/client";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { useStateContext } from "@/context/StateContext";
@@ -7,7 +7,8 @@ import toast from "react-hot-toast";
 const ItemDetails = ({ item }) => {
   const { image, name, details, price } = item;
   const [index, setIndex] = useState(0);
-  const { qty, incQty, decQty, onAdd } = useStateContext();
+  const { qty, incQty, setQty, decQty, onAdd, notAvail } = useStateContext();
+
   return (
     <div>
       <div className="product-detail-container">
@@ -39,19 +40,11 @@ const ItemDetails = ({ item }) => {
           <div className="quantity">
             <h3>Quantity:</h3>
             <p className="quantity-desc">
-              <button
-                type="button"
-                className="minus btn btn-danger"
-                onClick={decQty}
-              >
+              <button type="button" className="minus" onClick={decQty}>
                 <AiOutlineMinus />
               </button>
               <span className="num">{qty}</span>
-              <button
-                type="button"
-                className="plus btn btn-success"
-                onClick={incQty}
-              >
+              <button type="button" className="plus" onClick={incQty}>
                 <AiOutlinePlus />
               </button>
             </p>
@@ -64,7 +57,11 @@ const ItemDetails = ({ item }) => {
             >
               Add to Cart
             </button>
-            <button type="button" className="buy-now">
+            <button
+              type="button"
+              className="buy-now"
+              onClick={() => notAvail()}
+            >
               Buy Now
             </button>
           </div>

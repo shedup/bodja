@@ -1,4 +1,5 @@
 import { CustomNavbar, Item } from "@/components";
+import { useStateContext } from "@/context/StateContext";
 import { client } from "@/lib/client";
 import React, { useEffect } from "react";
 
@@ -6,6 +7,8 @@ const Home = ({ items }) => {
   useEffect(() => {
     document.title = "Merch - Bodja";
   });
+  const { setQty } = useStateContext();
+  setQty(1);
   return (
     <>
       <div className="heading">
