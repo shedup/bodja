@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="150" height="150">
+  <!-- Teacup body -->
+  <path d="M20 70 Q50 20 80 70 Q110 120 140 70 L120 70 Q110 100 90 120 Q70 140 60 120 L40 120 Q30 100 20 70 Z" fill="white" stroke="black" stroke-width="2" />
+
+  <!-- Teacup handle -->
+  <path d="M75 70 Q80 50 95 70" fill="white" stroke="black" stroke-width="2" />
+
+  <!-- Teacup top rim -->
+  <path d="M35 70 Q50 40 65 70 T95 70" fill="white" stroke="black" stroke-width="2" />
+
+  <!-- Text -->
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="12" fill="black">
+    BODJA
+  </text>
+</svg>

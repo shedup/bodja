@@ -1,3 +1,5 @@
+import { useStateContext } from "@/context/StateContext";
+import { Cart } from "@/components";
 import Link from "next/link";
 import React from "react";
 import Container from "react-bootstrap/Container";
@@ -6,6 +8,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
 function CustomNavbar() {
+  const { totalQuantities, showCart, setShowCart } = useStateContext();
   return (
     <>
       <Navbar className="navbarStyle" expand="lg">
@@ -29,10 +32,17 @@ function CustomNavbar() {
               </Nav>
             </Navbar.Collapse>
           </div>
-          <button type="button" className="cart-icon">
+          <button
+            type="button"
+            className="cart-icon"
+            onClick={() => {
+              setShowCart(true);
+            }}
+          >
             <AiOutlineShoppingCart />
-            <span className="cart-item-qty">93</span>
+            <span className="cart-item-qty">{totalQuantities}</span>
           </button>
+          {showCart && <Cart />}
         </Container>
       </Navbar>
     </>

@@ -221,23 +221,22 @@ h2 {
   transform: scale(1.1, 1.1);
 }
 .quantity-desc {
-  border: 1px solid gray;
-  padding: 6px;
 }
 .quantity-desc span {
   font-size: 16px;
   padding: 6px 12px;
-  cursor: pointer;
 }
 .quantity-desc .minus {
-  border-right: 1px solid gray;
-  color: #f02d34;
+  width: 2rem;
+  height: 2em;
+  padding: 0;
 }
 .quantity-desc .plus {
-  color: rgb(49, 168, 49);
+  padding: 0;
+  width: 2rem;
+  height: 2em;
 }
 .quantity-desc .num {
-  border-right: 1px solid gray;
   font-size: 20px;
 }
 

@@ -4,7 +4,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="icon" href="/static/example_svg.ico" />
+        {/* <link rel="icon" href="/static/example_svg.ico" /> */}
+        <link rel="icon" href="/static/example2.svg" />
         <meta charSet="UTF-8"></meta>
         <meta
           name="keywords"
