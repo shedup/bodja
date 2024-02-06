@@ -1,5 +1,6 @@
 import { useStateContext } from "@/context/StateContext";
 import { urlFor } from "@/lib/client";
+import getStripe from "@/lib/getStripe";
 import Link from "next/link";
 import React, { useRef } from "react";
 import toast from "react-hot-toast";
@@ -25,6 +26,25 @@ const Cart = () => {
   document.body.addEventListener("click", ({ target }) => {
     if (target.className == "cart-wrapper") setShowCart(false);
   });
+
+  // Payment method api call
+  const handleCheckout = async () => {
+    const stripe = await getStripe();
+    const response = await fetch("/api/stripe", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(cartItems),
+    });
+    if (response.statusCode === 500) return;
+
+    const data = await response.json();
+    console.log(data);
+    toast.loading("Redirecting...");
+    stripe.redirectToCheckout({ sessionId: data.id });
+  };
+
   return (
     <div
       className="cart-wrapper"
@@ -119,7 +139,7 @@ const Cart = () => {
               <button
                 type="button"
                 className="btn-cart"
-                onClick={() => notAvail()}
+                onClick={handleCheckout}
               >
                 Pay With Stripe
               </button>
