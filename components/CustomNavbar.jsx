@@ -32,7 +32,7 @@ function CustomNavbar() {
               </Nav>
             </Navbar.Collapse>
           </div>
-          <button
+          {/* <button
             type="button"
             className="cart-icon"
             onClick={() => {
@@ -42,7 +42,8 @@ function CustomNavbar() {
             <AiOutlineShoppingCart />
             <span className="cart-item-qty">{totalQuantities}</span>
           </button>
-          {showCart && <Cart />}
+          {showCart && <Cart />} */}
+          <button style={{ visibility: "hidden" }}></button>
         </Container>
       </Navbar>
     </>

@@ -19,6 +19,12 @@ export default {
       type: 'string',
     },
     {
+      name: 'order',
+      title: 'Order',
+      description: 'Enter the order members will appear, lowest shows up first',
+      type: 'number',
+    },
+    {
       name: 'role',
       title: 'Role',
       description: "Enter the member's role",
@@ -28,13 +34,14 @@ export default {
       name: 'details',
       title: 'Details',
       description: 'Provide any additional description',
+      // Rule enforced on this details field.
       validation: (Rule) =>
         Rule.custom((value) => {
-          const wordCount = value.split(/\s+/).filter((word) => word.length > 0).length
-          const maxWordCount = 50 // Change this to your desired maximum word count
+          const charCount = value.length
+          const maxCharCount = 250 // Change this to your desired maximum characters, not word.
 
-          if (wordCount > maxWordCount) {
-            return `Exceeds the maximum word count of ${maxWordCount}`
+          if (charCount > maxCharCount) {
+            return `Exceeds the maximum charcter count of ${maxCharCount}`
           }
 
           return true
