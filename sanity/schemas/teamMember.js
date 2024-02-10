@@ -21,7 +21,7 @@ export default {
     {
       name: 'order',
       title: 'Order',
-      description: 'Enter the order members will appear, lowest shows up first.',
+      description: 'Enter the order members will appear, lowest shows up first',
       type: 'number',
     },
     {
