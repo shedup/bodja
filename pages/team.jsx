@@ -8,7 +8,7 @@ const Team = ({ members }) => {
   });
   return (
     <>
-      {/* <div className="team-container">
+      <div className="team-container">
         <h1>Meet the Team</h1>
         <p>__</p>
       </div>
@@ -16,13 +16,12 @@ const Team = ({ members }) => {
         {members?.map((member) => (
           <TeamMember member={member} key={member._id} />
         ))}
-      </div> */}
-      <ComingSoon />
+      </div>
     </>
   );
 };
 export const getServerSideProps = async () => {
-  const query = '*[_type == "member"]';
+  const query = '*[_type == "member"] | order(order asc)';
   const members = await client.fetch(query);
 
   return {
