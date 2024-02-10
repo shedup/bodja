@@ -555,8 +555,9 @@ h2 {
   .product-detail-image:hover {
     transform: scale(1, 1);
   }
-  .heading-about {
-    margin: 40px 0px;
+  .heading-about,
+  .team-container {
+    margin: 40px 10px;
   }
   .product-detail-container {
     justify-content: center;
@@ -567,6 +568,9 @@ h2 {
   .team {
     width: 25rem;
     object-fit: contain;
+  }
+  .teams-container {
+    margin: auto;
   }
   .team-body {
     height: 120%;

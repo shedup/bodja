@@ -5,11 +5,9 @@ const ComingSoon = () => {
   return (
     <div className="misc-container">
       <h1>Coming Soon...</h1>
-      <Link href="/about">
-        <button type="button" className="btn-cart">
-          Check out our about page
-        </button>
-      </Link>
+      <p>
+        Check out our <Link href="/about">about</Link> page
+      </p>
     </div>
   );
 };
