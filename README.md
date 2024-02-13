@@ -1,3 +1,10 @@
+# Overview
+The repository contains source code for the bodja website. The tech
+stack used here is Next.js for server-side rendering, Sanity for the
+data stored in their content management system, React for the frontend,
+and Vercel for the deployment.
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

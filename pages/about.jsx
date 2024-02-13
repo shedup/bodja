@@ -8,6 +8,7 @@ const About = () => {
     <>
       <div className="heading-about">
         <h1>
+    
           To Inspire, Connect, and Uplift Tibetan youth in exile with stories
           that matter
         </h1>
