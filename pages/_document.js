@@ -14,10 +14,7 @@ export default function Document() {
         ></meta>
         <meta name="description" content="To Inspire, Connect, and Uplift Tibetan youth in exile with stories that matter"></meta>
         <meta name="author" content="Tenzin Chaksam"></meta>
-        <meta
-          name="google-site-verification"
-          content="dklqgeB3SeTkoFo4P0Ouj7IWLw6h8mfUJV4oIlW7_4I"
-        />
+    <meta name="google-site-verification" content="7BDBOOa2RABkwYZbRG0va2Fm4J9P5omcuSZ6x3Mpblw" />
       </Head>
       <body>
         <Main />
