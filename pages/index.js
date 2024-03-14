@@ -11,7 +11,7 @@ const Home = ({ items }) => {
   setQty(1);
   return (
     <>
-      {/* <div className="heading">
+      <div className="heading">
         <h1>Bodja Merch site</h1>
         <p>Buy to support our team.</p>
       </div>
@@ -19,8 +19,8 @@ const Home = ({ items }) => {
         {items?.map((item) => (
           <Item item={item} key={item._id} />
         ))}
-      </div> */}
-      <ComingSoon />
+      </div>
+      {/* <ComingSoon /> */}
     </>
   );
 };
